@@ -2,12 +2,19 @@ package com.wildcodeschool.wildandwizard.repository;
 
 import com.wildcodeschool.wildandwizard.entity.Wizard;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class WizardRepository implements WizardDao {
+
+    @Autowired
+    @Qualifier("wizard")
+    private Wizard
 
     private static List<Wizard> wizards = new ArrayList<>(
             Arrays.asList(
